@@ -1,5 +1,5 @@
-- name: nginx install & run
-  hosts: frontend1
+- name: install & run nginx
+  hosts: web
   become: yes # sudo access
   tasks:
   - name: install nginx server
