@@ -1,6 +1,6 @@
 - name: task level variables
   hosts: local
-  # connection: local
+  connection: local
   vars: # this will aplly globally
     COURSE: DevOps with AWS
     DURATION: 100HR
