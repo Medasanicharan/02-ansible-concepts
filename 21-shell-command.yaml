@@ -1,27 +1,31 @@
 - name: shell vs command
   hosts: web
   tasks:
-  # - name: redirect ls output to a file
-  #   # ansible.builtin.command: "ls -ltr > /tmp/output.txt"
-  #   ansible.builtin.shell: "ls -ltr > /tmp/output.txt"
-  #   register: command_result
+  - name: redirect ls output to a file
+    ansible.builtin.command: "ls -ltr > /tmp/output.txt"
+    # ansible.builtin.shell: "ls -ltr > /tmp/output.txt"
+    register: command_result
 
   # - name: print the outcome
   #   ansible.builtin.debug:
   #     msg: "{{ command_result }}"
 
-  - name: redirect ls output to a file using command
-    ansible.builtin.command: "ls -ltr"
-    register: command_output_command
+  - name: command module test
+    ansible.builtin.command: cat /etc/passwd | grep root
+    register: users_output
+
+  # - name: redirect ls output to a file using command
+  #   ansible.builtin.command: "ls -ltr"
+  #   register: command_output_command
   
-  - name: print the command output
-    ansible.builtin.debug:
-      msg: "{{ command_output_command }}"
+  # - name: print the command output
+  #   ansible.builtin.debug:
+  #     msg: "{{ command_output_command }}"
   
-  - name: redirect ls output to a file using shell
-    ansible.builtin.shell: "ls -ltr > /tmp/output.txt"
-    register: command_output_shell
+  # - name: redirect ls output to a file using shell
+  #   ansible.builtin.shell: "ls -ltr > /tmp/output.txt"
+  #   register: command_output_shell
   
-  - name: print the shell output
-    ansible.builtin.debug:
-      msg: "{{ command_output_shell }}"
+  # - name: print the shell output
+  #   ansible.builtin.debug:
+  #     msg: "{{ command_output_shell }}"
