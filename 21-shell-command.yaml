@@ -11,7 +11,8 @@
   #     msg: "{{ command_result }}"
 
   - name: command module test
-    ansible.builtin.command: cat /etc/passwd | grep root
+    # ansible.builtin.command: cat /etc/passwd | grep root
+    ansible.builtin.shell: cat /etc/passwd | grep root
     register: users_output
 
   # - name: redirect ls output to a file using command
