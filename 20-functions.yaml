@@ -1,4 +1,4 @@
-- name: functions
+- name: functions/filters
   hosts: local
   connection: local
   vars:
@@ -58,3 +58,11 @@
       ip: "54.209.52.82"
     ansible.builtin.debug:
       msg: "{{ ip | ansible.utils.ipaddr }}"
+
+  - name: read students yaml
+    ansible.builtin.set.fact: # setting the variable
+      student_yaml: "{{ lookup('file', students.yaml) | from_yaml}}"
+
+  - name: convert YAML to JSON
+    ansible.builtin.debug:
+      msg: "{{ student_yaml | to_nice_json }}"
