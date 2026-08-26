@@ -53,11 +53,11 @@
     ansible.builtin.debug:
       msg: "{{ ip | ansible.utils.ipaddr }}"
 
-  - name: check IP address is valid or not
-    vars:
-      ip: "54.209.52.82"
-    ansible.builtin.debug:
-      msg: "{{ ip | ansible.utils.ipaddr }}"
+  # - name: check IP address is valid or not
+  #   vars:
+  #     ip: "54.209.52.82"
+  #   ansible.builtin.debug:
+  #     msg: "{{ ip | ansible.utils.ipaddr }}"
 
   - name: read students yaml
     ansible.builtin.set_fact: # setting the variable
