@@ -18,6 +18,17 @@
   hosts: local
   connection: local
   vars:
+    IS_LIVE: true
+  tasks:
+  - name: check live or not
+    ansible.builtin.debug:
+      msg: "yes, it is live"
+    when: IS_LIVE
+
+- name: conditions demo-3
+  hosts: local
+  connection: local
+  vars:
     NUMBER: 102
   tasks:
   - name: print if the number is less than or equal to 100

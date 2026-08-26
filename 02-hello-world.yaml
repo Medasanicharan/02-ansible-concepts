@@ -1,8 +1,23 @@
 - name: hello world
-  hosts: web
+  hosts: local
   # connection: local # no need of username and password
   tasks:
   - name: print hello world
     ansible.builtin.debug:
       msg: "Hello World"
 
+
+
+  # If 'connection: local' is commented:
+  # Ansible connects to the target using SSH.
+  # Run with username and password:
+  # ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 <file-name>
+
+  # If 'connection: local' is uncommented:
+  # Ansible executes directly on the Ansible control node.
+  # No SSH username/password is required.
+  # Run:
+  # ansible-playbook -i inventory.ini <file-name>
+
+
+ 
