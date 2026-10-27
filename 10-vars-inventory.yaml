@@ -1,5 +1,5 @@
 - name: host variables from inventory
-  hosts: frontend # refering host variables
+  hosts: web # refering host variables
   tasks:
   - name: print course info
     ansible.builtin.debug:
