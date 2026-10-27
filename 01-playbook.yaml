@@ -1,6 +1,6 @@
 - name: ping the server
-  hosts: frontend1
-  tasks: # list of tasks
+  hosts: localhost ## target ansible server itself
+  coneection: local ## it will not expect credentials
+  tasks: # tasks == mosules == collections (list of tasks)
   - name: ping the server
     ansible.builtin.ping: # no need of inputs for ping
-
