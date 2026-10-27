@@ -1,4 +1,4 @@
-- name: Play level variables
+- name: task level variables
   hosts: local
   connection: local
   vars:
@@ -11,7 +11,7 @@
       #vars refernce should be surrounded by ""
         msg: "I purchased {{ ACRES }} acres of land from {{ SELLER }} on {{ PURCHASE_DAY }}."
 
-    - name: print land purchase information again
+    - name: print updated land purchase information using task level variables
       vars: # this will aplly locally
         ACRES: 20acres # equal to ACRES: 10acres in shell, shell we refer $VAR or ${VAR}
         SELLER: charan
