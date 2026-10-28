@@ -4,14 +4,14 @@
   tasks:
   - name: print facts
     ansible.builtin.debug:
-      msg: "{{ ansible_facts }}"
+      msg: "{{ ansible_facts }}" ## this is reserved variable
 
-  - name: check redhat or not
-    ansible.builtin.debug:
-      msg: "yes, package manager is RedHat"
-    when: ansible_facts.os_family == "RedHat"
+  # - name: check redhat or not
+  #   ansible.builtin.debug:
+  #     msg: "yes, package manager is RedHat"
+  #   when: ansible_facts.os_family == "RedHat"
 
-  - name: check debian or not
-    ansible.builtin.debug:
-      msg: "yes, package manager is debian"
-    when: ansible_facts.os_family == "Debian"
+  # - name: check debian or not
+  #   ansible.builtin.debug:
+  #     msg: "yes, package manager is debian"
+  #   when: ansible_facts.os_family == "Debian"

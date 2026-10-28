@@ -7,4 +7,4 @@
       msg: "Hello I am learning {{ COURSE }}, Duration: {{ DURATION }}, Trainer is: {{ TRAINER }}"
 
 
-# run from CLI: ansible-playbook -i inventory.ini 11-vars-args.yaml -e "COURSE=args" -e "DURATION=10Min" -e "TRAINER=charan"
+# run from CLI: ansible-playbook -i inventory.ini 11-vars-args.yaml -e "COURSE=args" -e "DURATION='10 Min'" -e "TRAINER=charan"
