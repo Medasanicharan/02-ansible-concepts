@@ -5,6 +5,13 @@
   - name: print facts
     ansible.builtin.debug:
       msg: "{{ ansible_facts }}" ## this is reserved variable
+  
+  - name: print some info
+    debug:
+      msg: |
+        OS family: "{{ ansible_facts ['os_family'] }}" 
+        private_ip: "{{ ansible_facts.default_ipv4.address }}" 
+        private_ip: "{{ ansible_facts['default_ipv4'] ['address'] }}" 
 
   # - name: check redhat or not
   #   ansible.builtin.debug:
