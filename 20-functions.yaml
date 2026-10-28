@@ -42,10 +42,10 @@
     ansible.builtin.debug:
       msg: "Hello {{ name | lower }}"
 
-  - name: Install netaddr using pip3.9
-    ansible.builtin.pip:
-      name: netaddr
-      executable: pip3.9
+  # - name: Install netaddr using pip3.9
+  #   ansible.builtin.pip:
+  #     name: netaddr
+  #     executable: pip3.9
 
   - name: check IP address is valid or not
     vars:
