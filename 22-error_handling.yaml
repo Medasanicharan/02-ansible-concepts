@@ -18,6 +18,6 @@
   #   ansible.builtin.command: useradd roboshop
   #   when: output.rc != 0
 
-  - name: create user
+  - name: create user ## idempotency
     ansible.builtin.user:
       name: roboshop
