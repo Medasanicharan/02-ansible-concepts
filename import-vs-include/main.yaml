@@ -1,0 +1,5 @@
+- name: Include Vs Import
+  hosts: localhost
+  connection: local
+  roles:
+  - role-1
