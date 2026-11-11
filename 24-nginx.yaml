@@ -1,4 +1,4 @@
-- name: instal nginx
+- name: install nginx
   hosts: dynamic_ansible
   become: yes
   # serial: 5
